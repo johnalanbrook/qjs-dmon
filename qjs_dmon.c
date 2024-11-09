@@ -122,7 +122,7 @@ static const JSCFunctionListEntry js_dmon_funcs[] = {
   JS_CFUNC_DEF("poll", 1, js_dmon_poll)
 };
 
-JSValue js_dmon(JSContext *js)
+JSValue js_dmon_use(JSContext *js)
 {
   JSValue export = JS_NewObject(js);
   JS_SetPropertyFunctionList(js, export, js_dmon_funcs, sizeof(js_dmon_funcs)/sizeof(JSCFunctionListEntry));

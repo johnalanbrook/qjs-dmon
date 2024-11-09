@@ -133,7 +133,7 @@ JSValue js_dmon_use(JSContext *js)
 }
 
 static int js_dmon_init(JSContext *js, JSModuleDef *m) {
-  JS_SetModuleExport(js, m, "default",js_dmon(js));
+  JS_SetModuleExport(js, m, "default",js_dmon_use(js));
   return 0;
 }
 

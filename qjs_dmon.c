@@ -74,7 +74,6 @@ JSValue js_dmon_watch(JSContext *js, JSValue self, int argc, JSValue *argv)
     
   const char *dir = JS_ToCString(js,argv[0]);
   watched = dmon_watch(dir,watch_cb, DMON_WATCHFLAGS_RECURSIVE, NULL);
-  printf("watch id is %lu\n", watched.id);
   return JS_UNDEFINED;
 }
 
